@@ -1,0 +1,26 @@
+import turtle
+
+def draw_square(brad):
+    
+    count = 0
+    while count < 4:
+        brad.forward(100)
+        brad.right(90)
+        count+=1
+        
+def draw_design():
+    window = turtle.Screen()
+    window.bgcolor("red")
+    
+    brad = turtle.Turtle()
+
+    brad.shape("circle")
+    brad.color("black")
+    brad.speed(6)
+
+    for i in range(1,37):
+        draw_square(brad)
+        brad.right(10)
+window.exitonClick()
+
+draw_design()
