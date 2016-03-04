@@ -1,0 +1,85 @@
+import turtle
+
+def turtle_miniproject():
+    
+    window = turtle.Screen()
+    window.bgcolor("white")
+
+    # creating instance for 3 drawings
+    flower = turtle.Turtle()
+    letD = turtle.Turtle()
+    letP = turtle.Turtle()
+    # calling 3 functions
+    draw_flower(flower)
+    draw_D(letD)
+    draw_P(letP)
+
+    window.exitonClick()
+    
+def draw_D(letD):
+
+    # penup- It will not draw anything while setting position of a turtle
+    letD.pu()
+    # setting position of a turtle for drawing letter D
+    letD.setpos(50,50)
+    # pendown - it will start drawing
+    letD.pd()
+    
+    letD.shape("circle")
+    letD.color("red")
+    letD.speed(6)
+    
+    # semi circle for letD D
+    letD.circle(100,180)
+    letD.left(90)
+    # for straight line in letD D
+    letD.forward(200)
+    
+def draw_P(letP):
+
+    # penup- It will not draw anything while setting position of a turtle
+    letP.pu()
+    # setting position of a turtle for drawing letter P
+    letP.setpos(200,50)
+    # pendown - it will start drawing
+    letP.pd()
+    letP.shape("triangle")
+    letP.color("green")
+    letP.speed(6)
+
+    # for straight line in letter P
+    letP.left(90)
+    letP.forward(200)
+    # for semicircle in letter P
+    letP.right(90)
+    letP.circle(-50,180)
+    
+               
+def draw_flower(flower):
+
+    # penup- It will not draw anything while setting position of a turtle
+    flower.pu()
+    # setting position of a turtle for drawing flower
+    flower.setpos(-200,0)
+    # pendown - it will start drawing
+    flower.pd()
+    flower.shape("turtle")
+    flower.color("blue")
+    flower.speed(10)
+
+    # draw Flower
+    for i in range(1,37):
+        flower.left(35)
+        flower.forward(50)
+        flower.right(35)
+        flower.forward(50)
+        flower.right(145)
+        flower.forward(50)
+        flower.right(35)
+        flower.forward(50)
+        flower.right(10)
+        
+    flower.right(90)
+    flower.forward(150)
+    
+turtle_miniproject()
