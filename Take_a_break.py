@@ -8,6 +8,4 @@ while break_count < 3:
     webbrowser.open("https://www.youtube.com/watch?v=4nd01DwuHwE")
     break_count+=1
 
-Output: It will open a web-browser and play video 3 times after every 2 hours.
-
 
