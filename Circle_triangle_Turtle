@@ -1,0 +1,15 @@
+def draw_circle():
+    angie = turtle.Turtle()
+    angie.shape("arrow")
+    angie.color("yellow")
+    angie.circle(100)
+
+def draw_triangle():
+    maggi = turtle.Turtle()
+    maggi.shape("turtle")
+    maggi.color("pink")
+    count = 0
+    while count < 3:
+        maggi.forward(100)
+        maggi.left(120)
+        count+=1
