@@ -1,12 +1,8 @@
 from twilio.rest import TwilioRestClient
-# import TwilioRestClient from rest which is inside twilio
-#Python's from statement lets you import specific attributes from a module into the current namespace.
 
 account_sid = "AC4c9770fb31e809c3cb8de009c332759f"
 auth_token = "87a447fd9e486f539880cd0b6d572f51"
 client = TwilioRestClient(account_sid,auth_token)
-# client is an instance
-# will call function _init_ of TwilioRestClient
 
 message = client.sms.messages.create(
     body="Hello Dipal... I am learning python.",
