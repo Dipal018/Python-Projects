@@ -1,0 +1,46 @@
+import Movies
+import fresh_tomatoes
+
+toy_story = Movies.Movie("Toy Story",
+                        "A story of a boy and his toys that come to life",
+                        "https://en.wikipedia.org/wiki/Toy_Story#/media/File:Toy_Story.jpg",
+                        "https://www.youtube.com/watch?v=KYz2wyBy3kc")
+
+the_good_dinosaur = Movies.Movie("The Good Dinosaur",
+                                 "A story of a dinasaur named 'arlo' who meets unlikely human friend while travelling",
+                                 "https://en.wikipedia.org/wiki/The_Good_Dinosaur#/media/File:The_Good_Dinosaur_poster.jpg",
+                                 "https://www.youtube.com/watch?v=O-RgquKVTPE")
+
+up = Movies.Movie("Up",
+                  "A love story of a beautiful couple!",
+                  "https://en.wikipedia.org/wiki/Up_(2009_film)#/media/File:Up_(2009_film).jpg",
+                  "https://www.youtube.com/watch?v=pkqzFUhGPJg")
+
+movies = [toy_story,the_good_dinosaur,up]
+#fresh_tomatoes.open_movies_page(movies)
+#print (Movies.Movie.VALID_RATINGS)
+print (Movies.Movie.__doc__)
+# __doc__ --> by default class variable 
+
+# Movies class file
+import webbrowser
+
+class Movie():
+    """ This class provides a way to store movies information """
+    VALID_RATINGS = ["G", "PG", "PG-13", "R"]
+    
+    def __init__(self,movie_title,movie_storyline, poster_image,trailer_youtube):
+        self.title = movie_title
+        self.storyline = movie_storyline
+        self.poster_image_url = poster_image
+        self.trailer_youtube_url = trailer_youtube
+
+    def show_trailer(self):
+        webbrowser.open(self.trailer_youtube_url)
+
+# show_trailer() --> instance Methods
+# self.title --> instance variable
+# Movie() --> class
+# def __init__() --> constructor
+# VALID_RATINGS -- > clas variable
+
