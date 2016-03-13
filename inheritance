@@ -4,16 +4,26 @@ class Parent():
         self.last_name = last_name
         self.eye_color = eye_color
 
+    def show_info(self):
+        print ("Last Name = "+self.last_name)
+        print ("Eye Color = "+self.eye_color)
+
 class Child(Parent):
     def __init__(self,last_name, eye_color, number_of_toys):
         print ("Child consturctor Called")
         Parent.__init__(self,last_name,eye_color)
         self.number_of_toys = number_of_toys
                     
-        
+    def show_info(self):
+        print ("Last Name = "+self.last_name)
+        print ("Eye Color = "+self.eye_color)
+        print ("Number of Toys = "+str(self.number_of_toys))
+        #define same method with same name. and accessing it. this is called method overriding
+    
 #peter_cyrus = Parent("Cyrus","blue")
 #print (peter_cyrus.last_name)
 
 peter_cyrus = Child("Cyrus","Blue",5)
-print (peter_cyrus.last_name)
-print (peter_cyrus.number_of_toys)
+#print (peter_cyrus.last_name)
+#print (peter_cyrus.number_of_toys)
+peter_cyrus.show_info() #show_info() is parent class method but child class inherits it so it will generate and output)
